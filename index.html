@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Western Fashion — discover modern styles for men, women and kids.">
+  <title>Western Fashion | Style Without Limits</title>
+  <style>
+    :root {
+      --black: #090909;
+      --panel: #141414;
+      --gold: #d5ad58;
+      --gold-light: #f0d58f;
+      --cream: #f6f1e7;
+      --muted: #aaa39a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .top-note {
+      text-align: center; padding: 8px 12px; background: var(--gold);
+      color: #111; font-size: 11px; letter-spacing: 2px; font-weight: 700;
+    }
+    header {
+      position: sticky; top: 0; z-index: 10; background: rgba(9,9,9,.96);
+      border-bottom: 1px solid rgba(213,173,88,.28);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; padding: 17px 7%;
+    }
+    .logo { font-family: Georgia, serif; font-size: 24px; letter-spacing: 3px; color: var(--gold-light); }
+    .logo span { display: block; font: 9px Arial, sans-serif; letter-spacing: 5px; text-align: center; color: var(--cream); }
+    nav { display: flex; gap: 26px; flex-wrap: wrap; }
+    nav a { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #e8e1d5; }
+    nav a:hover, .gold { color: var(--gold-light); }
+    .hero {
+      min-height: 520px; display: grid; place-items: center; text-align: center;
+      padding: 80px 20px;
+      background: radial-gradient(ellipse at center, #292216 0%, #111 42%, #090909 78%);
+      border-bottom: 1px solid rgba(213,173,88,.2);
+    }
+    .hero-inner { max-width: 760px; }
+    .eyebrow { color: var(--gold); font-size: 11px; letter-spacing: 5px; text-transform: uppercase; }
+    h1 { font:  clamp(42px, 8vw, 82px)/1.08 Georgia, serif; letter-spacing: 3px; margin: 20px 0; }
+    h1 em { color: var(--gold-light); font-weight: 400; }
+    .hero p { max-width: 540px; margin: 0 auto 30px; color: #c4bdb1; font-size: 15px; }
+    .button {
+      display: inline-block; border: 1px solid var(--gold); color: var(--gold-light);
+      padding: 12px 25px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      transition: .2s;
+    }
+    .button:hover { background: var(--gold); color: #111; }
+    section { padding: 75px 7%; }
+    .section-heading { text-align: center; margin-bottom: 35px; }
+    .section-heading h2 { font: clamp(29px, 4vw, 42px) Georgia, serif; margin: 8px 0; }
+    .section-heading p { color: var(--muted); font-size: 13px; }
+    .categories { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .category {
+      min-height: 210px; display: flex; flex-direction: column; justify-content: end;
+      padding: 25px; border: 1px solid rgba(213,173,88,.35);
+      background: linear-gradient(145deg, #27221a, #111 65%);
+      transition: .25s;
+    }
+    .category:hover { transform: translateY(-4px); border-color: var(--gold); }
+    .category small { color: var(--gold); letter-spacing: 3px; text-transform: uppercase; }
+    .category h3 { font: 30px Georgia, serif; margin-top: 5px; }
+    .products { background: #101010; }
+    .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .product-card { background: var(--panel); border: 1px solid #29251e; overflow: hidden; }
+    .product-photo {
+      min-height: 245px; display: grid; place-items: center; text-align: center;
+      background: linear-gradient(135deg, #24211b, #111);
+      color: #93866c; padding: 20px; font-size: 12px; letter-spacing: 2px;
+    }
+    .product-photo span { display: block; font-size: 38px; margin-bottom: 8px; }
+    .product-info { padding: 17px; }
+    .product-info h3 { font: 20px Georgia, serif; }
+    .product-info p { color: var(--muted); font-size: 12px; margin: 5px 0 12px; }
+    .price { color: var(--gold-light); font-weight: 700; }
+    .about { text-align: center; max-width: 760px; margin: auto; }
+    .about p { color: #bcb4a8; margin-top: 15px; }
+    .contact { background: #12110f; text-align: center; border-top: 1px solid #332a1a; }
+    .contact p { color: var(--muted); margin: 10px 0 22px; }
+    footer { padding: 22px; text-align: center; color: #8e877d; font-size: 11px; border-top: 1px solid #29251e; }
+    @media (max-width: 700px) {
+      header { flex-direction: column; padding: 14px 5%; gap: 12px; }
+      nav { justify-content: center; gap: 14px; }
+      nav a { font-size: 10px; }
+      .categories, .product-grid { grid-template-columns: 1fr; }
+      .category { min-height: 155px; }
+      section { padding: 55px 6%; }
+      .hero { min-height: 440px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-note">NEW SEASON • NEW LOOK • YOUR STYLE</div>
+  <header>
+    <a class="logo" href="#">WESTERN <span>FASHION</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="eyebrow">Wear your confidence</div>
+        <h1>STYLE THAT<br><em>STANDS OUT.</em></h1>
+        <p>Discover looks made for every moment. Explore the latest styles for men, women and kids at Western Fashion.</p>
+        <a class="button" href="#products">Explore collection</a>
+      </div>
+    </section>
+
+    <section id="collections">
+      <div class="section-heading">
+        <div class="eyebrow">Find your look</div>
+        <h2>Our Collections</h2>
+        <p>Something stylish for everyone.</p>
+      </div>
+      <div class="categories">
+        <a class="category" href="#products"><small>Collection 01</small><h3>Men</h3></a>
+        <a class="category" href="#products"><small>Collection 02</small><h3>Women</h3></a>
+        <a class="category" href="#products"><small>Collection 03</small><h3>Kids</h3></a>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="section-heading">
+        <div class="eyebrow">Handpicked styles</div>
+        <h2>Featured Products</h2>
+        <p>Product photos and prices will be added here as you share them.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-photo"><div><span>✦</span>PRODUCT PHOTO 01</div></div>
+          <div class="product-info"><h3>Product Name</h3><p>Men / Women / Kids</p><div class="price">₹ Price coming soon</div></div>
+        </article>
+        <article class="product-card">
+          <div class="product-photo"><div><span>✦</span>PRODUCT PHOTO 02</div></div>
+          <div class="product-info"><h3>Product Name</h3><p>Men / Women / Kids</p><div class="price">₹ Price coming soon</div></div>
+        </article>
+        <article class="product-card">
+          <div class="product-photo"><div><span>✦</span>PRODUCT PHOTO 03</div></div>
+          <div class="product-info"><h3>Product Name</h3><p>Men / Women / Kids</p><div class="price">₹ Price coming soon</div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <div class="eyebrow">The Western Fashion story</div>
+        <h2 style="font: clamp(29px, 4vw, 42px) Georgia,serif; margin-top:10px;">Fashion for every you.</h2>
+        <p>Western Fashion brings together modern style and everyday comfort. Our collections are made to help you express your own look, wherever life takes you.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="eyebrow">Stay connected</div>
+      <h2 style="font: 36px Georgia,serif; margin-top:8px;">Contact Western Fashion</h2>
+      <p>For orders and enquiries, contact us.</p>
+      <a class="button" href="mailto:hello@westernfashion.example">Email us</a>
+    </section>
+  </main>
+
+  <footer>© 2026 Western Fashion. All rights reserved.</footer>
+</body>
+</html>
